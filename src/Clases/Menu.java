@@ -50,7 +50,7 @@ public class Menu implements InterfazMenu {
                     break;
                 case 6:
                     CaracteresPorPalabra analizadorPalabras = new CaracteresPorPalabra();
-                    analizadorPalabras.contarCaracteresPorPalabra(frase);
+                    analizadorPalabras.contarCaracteresPorPalabra(sc, frase);
                     break;
                 case 7:
                     CaracterPorPalabra analizadorFrecuenciaPalabra = new CaracterPorPalabra();

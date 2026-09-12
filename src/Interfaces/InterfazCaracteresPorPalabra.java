@@ -1,5 +1,8 @@
 package Interfaces;
 
+import java.util.Scanner;
+
 public interface InterfazCaracteresPorPalabra {
-    void contarCaracteresPorPalabra(String frase);
+    default void contarCaracterPorPalabra(Scanner sc, String frase) {}
+    default void contarCaracteresPorPalabra(Scanner sc, String frase) {}
 }

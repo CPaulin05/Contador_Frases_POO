@@ -1,9 +1,9 @@
 package Clases;
 
-import Interfaces.InterfazCaracterPorPalabra;
+import Interfaces.InterfazCaracteresPorPalabra;
 import java.util.Scanner;
 
-public class CaracterPorPalabra implements InterfazCaracterPorPalabra {
+public class CaracterPorPalabra implements InterfazCaracteresPorPalabra {
 
     @Override
     public void contarCaracterPorPalabra(Scanner sc, String frase) {

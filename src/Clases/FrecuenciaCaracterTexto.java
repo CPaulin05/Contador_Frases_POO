@@ -1,30 +1,41 @@
 package Clases;
 
 import Interfaces.InterfazFrecuenciaCaracterTexto;
-
 import java.util.Scanner;
 
 public class FrecuenciaCaracterTexto implements InterfazFrecuenciaCaracterTexto {
 
     @Override
     public void contarCaracterEnTexto(Scanner sc, String frase) {
-        System.out.println("Ingresa el carácter que deseas buscar en el texto:");
-        String entrada = sc.nextLine();
-
-        if (entrada.isEmpty()) {
-            System.out.println("No ingresaste ningún carácter.");
+        if (frase == null || frase.trim().isEmpty()) {
+            System.out.println("La frase está vacía.");
             return;
         }
 
-        char caracterBuscado = entrada.charAt(0);
-        int contador = 0;
+        String texto = frase.toLowerCase().replaceAll("\\s+", "");
 
-        for (int i = 0; i < frase.length(); i++) {
-            if (frase.charAt(i) == caracterBuscado) {
-                contador++;
+        for (int i = 0; i < texto.length(); i++) {
+            char c = texto.charAt(i);
+
+            boolean yaProcesado = false;
+            for (int j = 0; j < i; j++) {
+                if (texto.charAt(j) == c) {
+                    yaProcesado = true;
+                    break;
+                }
+            }
+
+            if (!yaProcesado) {
+                int contador = 0;
+                for (int k = 0; k < texto.length(); k++) {
+                    if (texto.charAt(k) == c) {
+                        contador++;
+                    }
+                }
+
+                String vezTexto = (contador == 1) ? "1 vez" : contador + " veces";
+                System.out.println(c + " " + vezTexto);
             }
         }
-
-        System.out.println("El carácter '" + caracterBuscado + "' se repite " + contador + " vez/veces en el texto total.");
     }
 }
