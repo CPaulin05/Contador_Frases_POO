@@ -1,38 +1,46 @@
 package Clases;
 
 import Interfaces.InterfazCaracterPorPalabra;
-
 import java.util.Scanner;
 
 public class CaracterPorPalabra implements InterfazCaracterPorPalabra {
 
     @Override
     public void contarCaracterPorPalabra(Scanner sc, String frase) {
-        System.out.println("Ingresa el carácter que deseas buscar:");
-        String entrada = sc.nextLine();
-
-        if (entrada.isEmpty()) {
-            System.out.println("No ingresaste ningún carácter.");
+        if (frase == null || frase.trim().isEmpty()) {
+            System.out.println("La frase está vacía.");
             return;
         }
 
-        char caracterBuscado = entrada.charAt(0);
         String[] palabras = frase.trim().split("\\s+");
 
-        if (frase.trim().isEmpty()) {
-            System.out.println("No hay palabras ingresadas.");
-            return;
-        }
+        for (int p = 0; p < palabras.length; p++) {
+            String palabra = palabras[p].toLowerCase();
+            System.out.println("palabra " + (p + 1) + ":");
 
-        System.out.println("Frecuencia del carácter '" + caracterBuscado + "' por palabra:");
-        for (String palabra : palabras) {
-            int contador = 0;
             for (int i = 0; i < palabra.length(); i++) {
-                if (palabra.charAt(i) == caracterBuscado) {
-                    contador++;
+                char c = palabra.charAt(i);
+
+                boolean yaProcesado = false;
+                for (int j = 0; j < i; j++) {
+                    if (palabra.charAt(j) == c) {
+                        yaProcesado = true;
+                        break;
+                    }
+                }
+
+                if (!yaProcesado) {
+                    int contador = 0;
+                    for (int k = 0; k < palabra.length(); k++) {
+                        if (palabra.charAt(k) == c) {
+                            contador++;
+                        }
+                    }
+
+                    String vezTexto = (contador == 1) ? "1 vez" : contador + " veces";
+                    System.out.println(c + " " + vezTexto);
                 }
             }
-            System.out.println("Palabra \"" + palabra + "\": " + contador + " vez/veces");
         }
     }
 }
