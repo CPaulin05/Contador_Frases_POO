@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazNumeros;
+
 public class Numeros implements InterfazNumeros {
 
     @Override

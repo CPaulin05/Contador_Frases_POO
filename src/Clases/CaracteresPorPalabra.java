@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazCaracteresPorPalabra;
+
 public class CaracteresPorPalabra implements InterfazCaracteresPorPalabra {
 
     @Override

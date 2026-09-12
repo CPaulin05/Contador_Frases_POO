@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazVocalesConsonantes;
+
 public class VocalesConsonantes implements InterfazVocalesConsonantes {
 
     @Override

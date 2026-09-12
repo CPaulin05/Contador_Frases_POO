@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazCaracterPorPalabra;
+
 import java.util.Scanner;
 
 public class CaracterPorPalabra implements InterfazCaracterPorPalabra {

@@ -1,3 +1,6 @@
+import Clases.IngresoFrase;
+import Clases.Menu;
+
 import java.util.Scanner;
 
 public class Main {

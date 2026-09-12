@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazEspacios;
+
 public class Espacios implements InterfazEspacios {
 
     @Override

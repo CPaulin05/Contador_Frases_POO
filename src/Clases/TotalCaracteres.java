@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazTotalCaracteres;
+
 public class TotalCaracteres implements InterfazTotalCaracteres {
 
     @Override

@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazIngresoFrase;
+
 import java.util.Scanner;
 
 public class IngresoFrase implements InterfazIngresoFrase {

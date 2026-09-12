@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazMenu;
+
 import java.util.Scanner;
 
 public class Menu implements InterfazMenu {

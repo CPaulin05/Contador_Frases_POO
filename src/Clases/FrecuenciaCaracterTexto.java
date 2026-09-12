@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazFrecuenciaCaracterTexto;
+
 import java.util.Scanner;
 
 public class FrecuenciaCaracterTexto implements InterfazFrecuenciaCaracterTexto {

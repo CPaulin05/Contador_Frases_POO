@@ -1,3 +1,7 @@
+package Clases;
+
+import Interfaces.InterfazMayusculasMinusculas;
+
 public class MayusculasMinusculas implements InterfazMayusculasMinusculas {
 
     @Override
